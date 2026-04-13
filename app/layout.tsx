@@ -47,6 +47,11 @@ export const metadata: Metadata = {
       "Compare Tradeify plans, calculate ROI, and get an AI recommendation powered by Claude.",
     creator: "@smailiali",
   },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   robots: {
     index: true,
     follow: true,
