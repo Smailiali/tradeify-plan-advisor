@@ -53,6 +53,44 @@ body {
   border: 1px solid #1f2937;
 }
 
+/* Range slider styling */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  background: #1f2937;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: currentColor;
+  cursor: pointer;
+  border: 2px solid #0a0e17;
+  box-shadow: 0 0 0 1px currentColor;
+  transition: transform 0.1s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: currentColor;
+  cursor: pointer;
+  border: 2px solid #0a0e17;
+  transition: transform 0.1s ease;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
