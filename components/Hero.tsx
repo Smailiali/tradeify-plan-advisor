@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden bg-gradient-to-b from-[#0a0e17] to-[#111827] py-24 md:py-32"
+      className="relative w-full overflow-hidden bg-gradient-to-b from-[#0a0e17] to-[#111827] pb-24 pt-32 md:pb-32 md:pt-40"
     >
       {/* Animated dot grid background */}
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" />

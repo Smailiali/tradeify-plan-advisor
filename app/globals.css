@@ -20,7 +20,36 @@ body {
   min-height: 100vh;
 }
 
-/* Animated dot grid for Hero background */
+/* ── Selection color ───────────────────────────────────────────────────────── */
+::selection {
+  background-color: rgba(139, 92, 246, 0.3);
+  color: #f9fafb;
+}
+
+/* ── Focus ring ────────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* ── Animated dot grid for Hero background ─────────────────────────────────── */
 .dot-grid {
   background-image: radial-gradient(circle, #ffffff18 1px, transparent 1px);
   background-size: 28px 28px;
@@ -32,7 +61,7 @@ body {
   100% { background-position: 28px 28px; }
 }
 
-/* Section divider */
+/* ── Section divider ───────────────────────────────────────────────────────── */
 .section-divider {
   height: 1px;
   background: linear-gradient(
@@ -45,7 +74,7 @@ body {
   );
 }
 
-/* Glassmorphism card */
+/* ── Glassmorphism card ────────────────────────────────────────────────────── */
 .glass-card {
   background: rgba(17, 24, 39, 0.6);
   backdrop-filter: blur(12px);
@@ -53,7 +82,7 @@ body {
   border: 1px solid #1f2937;
 }
 
-/* Range slider styling */
+/* ── Range slider styling ──────────────────────────────────────────────────── */
 .slider {
   -webkit-appearance: none;
   appearance: none;
@@ -74,11 +103,11 @@ body {
   cursor: pointer;
   border: 2px solid #0a0e17;
   box-shadow: 0 0 0 1px currentColor;
-  transition: transform 0.1s ease;
+  transition: transform 0.15s ease;
 }
 
 .slider::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
+  transform: scale(1.25);
 }
 
 .slider::-moz-range-thumb {
@@ -88,7 +117,17 @@ body {
   background: currentColor;
   cursor: pointer;
   border: 2px solid #0a0e17;
-  transition: transform 0.1s ease;
+  transition: transform 0.15s ease;
+}
+
+/* ── Number input: hide spinners ───────────────────────────────────────────── */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 @layer utilities {

@@ -5,6 +5,7 @@ import DrawdownVisualizer from "@/components/DrawdownVisualizer";
 import ConsistencyChecker from "@/components/ConsistencyChecker";
 import AIRecommendation from "@/components/AIRecommendation";
 import Footer from "@/components/Footer";
+import FadeInSection from "@/components/FadeInSection";
 
 function SectionDivider() {
   return <div className="section-divider mx-auto max-w-5xl" />;
@@ -15,16 +16,28 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Hero />
       <SectionDivider />
-      <PlanComparison />
+      <FadeInSection>
+        <PlanComparison />
+      </FadeInSection>
       <SectionDivider />
-      <ROICalculator />
+      <FadeInSection>
+        <ROICalculator />
+      </FadeInSection>
       <SectionDivider />
-      <DrawdownVisualizer />
+      <FadeInSection>
+        <DrawdownVisualizer />
+      </FadeInSection>
       <SectionDivider />
-      <ConsistencyChecker />
+      <FadeInSection>
+        <ConsistencyChecker />
+      </FadeInSection>
       <SectionDivider />
-      <AIRecommendation />
-      <Footer />
+      <FadeInSection>
+        <AIRecommendation />
+      </FadeInSection>
+      <FadeInSection>
+        <Footer />
+      </FadeInSection>
     </main>
   );
 }
