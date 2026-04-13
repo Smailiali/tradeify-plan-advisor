@@ -20,6 +20,39 @@ body {
   min-height: 100vh;
 }
 
+/* Animated dot grid for Hero background */
+.dot-grid {
+  background-image: radial-gradient(circle, #ffffff18 1px, transparent 1px);
+  background-size: 28px 28px;
+  animation: dot-drift 20s linear infinite;
+}
+
+@keyframes dot-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 28px 28px; }
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #1f2937 20%,
+    #374151 50%,
+    #1f2937 80%,
+    transparent
+  );
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #1f2937;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
